@@ -1,5 +1,11 @@
 <template>
   <div class="about">
-    <h3>We will build an application using Vue.js with the Vuex state management library</h3>
+    <pre>Build an application using Vue.js with the Vuex state management library</pre>
   </div>
 </template>
+
+<style scoped>
+  .about {
+    padding: 0 2rem;
+  }
+</style>
