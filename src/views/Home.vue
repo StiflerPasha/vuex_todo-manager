@@ -1,5 +1,5 @@
 <template>
-		<div class="container">
+		<div>
 				<AddTodo />
 				<FilterTodos />
 				<Todos />
@@ -7,25 +7,23 @@
 </template>
 
 <script>
-   import Todos       from '../components/Todos';
    import AddTodo     from '../components/AddTodo';
    import FilterTodos from '../components/FilterTodos';
+   import Todos       from '../components/Todos';
 
    export default {
 	  name: 'home',
 	  components: {
-		 FilterTodos,
-		 Todos,
-		 AddTodo,
+	   AddTodo,
+	   FilterTodos,
+	   Todos,
 	  },
    };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 		.container {
 				max-width: 1100px;
-				margin: auto;
-				overflow: auto;
 				padding: 0 2rem;
 		}
 </style>

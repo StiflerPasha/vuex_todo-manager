@@ -1,12 +1,20 @@
 <template>
-		<div>
-				<h3>Add Todo</h3>
-				<div class="add">
-						<form @submit="onSubmit">
-								<input type="text" v-model="title" placeholder="Add Todo...">
-								<input type="submit" value="Submit">
-						</form>
-				</div>
+		<div class="container">
+				<form @submit="onSubmit">
+						<div class="field has-addons">
+								<p class="control is-expanded">
+										<input class="input is-rounded" type="text" v-model="title" placeholder="Add Todo...">
+								</p>
+								<p class="control">
+										<a class="button is-primary is-rounded">
+												<span class="icon is-small">
+														<i class="fas fa-check"></i>
+												</span>
+												<span>Save</span>
+										</a>
+								</p>
+						</div>
+				</form>
 		</div>
 </template>
 
@@ -24,30 +32,12 @@
 		 ...mapActions(['addTodo']),
 		 onSubmit(e) {
 			e.preventDefault();
-			this.addTodo(this.title);
-			this.title = ''
+			this.title.trim() && this.addTodo(this.title);
+			this.title = '';
 		 },
 	  },
    };
 </script>
 
-<style scoped>
-		form {
-				display: flex;
-		}
-
-		input[type='text'] {
-				flex: 10;
-				padding: 10px;
-				border: 1px solid #41b883;
-				outline: none;
-		}
-
-		input[type='submit'] {
-				flex: 2;
-				background: #41b883;
-				color: whitesmoke;
-				border: 1px solid #41b883;
-				cursor: pointer;
-		}
+<style lang="scss" scoped>
 </style>

@@ -1,23 +1,17 @@
 <template>
-		<div>
-				<div id="nav">
-						<router-link to="/">Todo List</router-link>
-						|
-						<router-link to="/about">About</router-link>
+		<div class="container">
+				<div id="nav" class="navbar navbar-start">
+						<router-link class="navbar-item" to="/">Todo List</router-link>
+						<router-link class="navbar-item" to="/about">About</router-link>
 				</div>
 				<router-view />
 		</div>
 </template>
 
 <style>
-		body {
-				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-				line-height: 1.6;
-				background: #e8f7f0;
-		}
-
-		#nav {
-				padding: 5px;
+		#nav.navbar {
+				margin-bottom: 5px;
+				background: transparent;
 		}
 
 		#nav a {
@@ -26,7 +20,14 @@
 				text-decoration: none;
 		}
 
+		#nav a:hover {
+				background: transparent;
+				color: darkseagreen;
+		}
+
+
 		#nav a.router-link-exact-active {
 				color: #42b983;
+				background: transparent;
 		}
 </style>

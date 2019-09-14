@@ -1,11 +1,13 @@
 <template>
-  <div class="about">
-    <pre>Build an application using Vue.js with the Vuex state management library</pre>
-  </div>
+		<div class="container is-family-code is-fluid">
+				<p class="subtitle is-4">
+						My first attempt with Bulma!
+				</p>
+		</div>
 </template>
 
-<style scoped>
-  .about {
-    padding: 0 2rem;
-  }
+<script>
+</script>
+
+<style lang="scss" scoped>
 </style>
